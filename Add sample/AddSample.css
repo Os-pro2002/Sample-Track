@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px;
+    border-bottom: 3px solid #007bff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 86px;
+}
+
+header img {
+    width: 80px;
+}
+
+header h1 {
+    flex: 1;
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.container {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 100px auto 0;
+    flex: 1;
+}
+
+.links {
+    margin-bottom: 40px;
+    text-align: center;
+    margin-top: 10px;
+}
+.links a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 23px;
+    margin: 0 15px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s, border-bottom 0.3s;
+    border-bottom: 3px solid #007bff;
+}
+
+.links a:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.links a.active {
+    border-bottom: 3px solid #007bff;
+}
+
+.track-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.track-container:hover {
+    transform: scale(1.02);
+}
+
+.track-container h2 {
+    margin-bottom: 25px;
+    font-size: 34px;
+    color: #007bff;
+    text-align: center;
+}
+
+/* .input-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+} */
+
+.track-container input,
+.track-container select {
+    padding: 15px;
+    width: 48%;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: border 0.3s;
+    min-width: 200px;
+}
+
+.track-container input:focus,
+.track-container select:focus {
+    border-color: #CCE5FF;
+    outline: none;
+}
+
+.track-container .full-width {
+    width: 100%; 
+    margin-top: 10px; 
+}
+
+
+.checkbox-group {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 أعمدة للصناديق الثلاثة */
+    gap: 2px; /* الفجوة بين الصناديق */
+    margin-top: 10px; /* المسافة بين المدخلات وخانات الاختيار */
+}
+.checkbox-group-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 أعمدة للصناديق الاثنين */
+    gap: 10px; /* الفجوة بين الصناديق */
+    margin-top: 10px; /* المسافة بين المدخلات وخانات الاختيار */
+}
+
+.track-container button {
+    padding: 15px 30px;
+    font-size: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.track-container button:hover {
+    background-color: #3399FF;
+    box-shadow: 0 5px 15px RGB(51, 153, 255);
+    font-weight:700;
+}
+
+.selected {
+border-color: #4CAF50; 
+background-color: #e8f5e9; 
+}

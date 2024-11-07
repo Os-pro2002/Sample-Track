@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px;
+    border-bottom: 3px solid #007bff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 86px;
+}
+
+header img {
+    width: 80px;
+}
+
+header h1 {
+    flex: 1;
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.container {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 100px auto 0;
+    flex: 1;
+}
+
+.links {
+    margin-bottom: 40px;
+    text-align: center;
+    margin-top: 10px; 
+}
+
+.links a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 23px;
+    margin: 0 15px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s, border-bottom 0.3s;
+    border-bottom: 3px solid #007bff;
+}
+
+.links a:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.links a.active {
+border-bottom: 3px solid #007bff;
+}
+
+.scan-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.scan-container:hover {
+    transform: scale(1.02);
+}
+
+.scan-container h2 {
+    margin-bottom: 25px;
+    font-size: 36px;
+    color: #007bff;
+    text-align: center;
+}
+
+.scan-container input {
+    padding: 15px;
+    width: 100%;
+    max-width: 400px;
+    margin-right: 10px;
+    font-size: 18px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: border 0.3s;
+}
+
+.scan-container input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.scan-container button {
+    padding: 15px 30px;
+    font-size: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    width: 326px;
+    font-weight: 550;
+}
+
+.scan-container button:hover {
+    background-color: #3399FF;
+    box-shadow: 0 5px 15px RGB(51, 153, 255);
+    font-weight:700;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 40px;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 20px;
+    text-align: left;
+    font-size: 18px;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+td {
+    background-color: #CCE5FF;
+    border-bottom: 1px solid #dee2e6;
+    transition: background-color 0.3s;
+}
+
+tr:hover td {
+    background-color: #CCE5FF;
+    cursor: pointer;
+}
+
+tr:nth-child(even) td {
+    background-color: #f1f3f5;
+}
+
+@media (max-width: 768px) {
+    .scan-container input {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .scan-container button {
+        width: 100%;
+    }
+}
